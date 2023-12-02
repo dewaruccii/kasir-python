@@ -1,0 +1,30 @@
+{
+  "laporan": [
+    {
+      "no_transaksi": "teutbxah",
+      "jumlah_pembayaran": 27000,
+      "jumlah_belanja": 27000,
+      "item_belanja": [
+        0,
+        1
+      ],
+      "type_pembayaran": 1,
+      "status": "Success",
+      "tanggal_transaksi": "2023-11-26 15:50:23.057442"
+    },
+    {
+      "no_transaksi": "jyupeyrj",
+      "jumlah_pembayaran": 50000,
+      "jumlah_belanja": 40000,
+      "item_belanja": [
+        2,
+        3,
+        3,
+        2
+      ],
+      "type_pembayaran": 1,
+      "status": "Success",
+      "tanggal_transaksi": "2023-11-27 10:49:10.105647"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "tipe_pembayaran": [
+    {
+      "tipe_id": 1,
+      "nama": "Tunai"
+    },
+    {
+      "tipe_id": 2,
+      "nama": "Qris"
+    },
+    {
+      "tipe_id": 3,
+      "nama": "Transfer"
+    }
+  ]
+}

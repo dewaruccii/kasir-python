@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nama_products": "Kopi",
+      "harga": "20000",
+      "type": "Minuman"
+    },
+    {
+      "id": 2,
+      "nama_products": "Mie Goreng",
+      "harga": "7000",
+      "type": "Makanan"
+    },
+    {
+      "id": 3,
+      "nama_products": "Nasi Goreng Gila",
+      "harga": "15000",
+      "type": "Makanan"
+    },
+    {
+      "id": 4,
+      "nama_products": "Es mambo",
+      "harga": "5000",
+      "type": "Minuman"
+    }
+  ]
+}

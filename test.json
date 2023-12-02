@@ -1,0 +1,14 @@
+{
+  "laporan": {
+    "no_transaksi": "oadnegan",
+    "jumlah_pembayaran": 20000,
+    "jumlah_belanja": 20000,
+    "type_pembayaran": 1,
+    "status": "Success"
+  },
+  "no_transaksi": "hcigyrfp",
+  "jumlah_pembayaran": 20000,
+  "jumlah_belanja": 20000,
+  "type_pembayaran": 1,
+  "status": "Success"
+}

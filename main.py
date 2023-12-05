@@ -211,15 +211,14 @@ def menu():
     clear_screen()
     show()
     settings()
+    if(len(keranjang) > 0):
+        showKeranjang()
     cmd = input("Masukan Pilihan Menu: ")
-    # if(len(keranjang) > 0):
-    #     showKeranjang()
     if(int(cmd) == 90):
-        return SettingShow(jsonParser('penjualan.json')['laporan'])
+        SettingShow(jsonParser('penjualan.json')['laporan'])
     if(cmd[0] == '-'):
         cmd = cmd.split('-')
         cmd = cmd[-1]
-        print(cmd)
         removeItemsFromKeranjang(int(cmd) - 1 )
     else:
         troli(int(cmd) - 1)
@@ -229,39 +228,39 @@ def menu():
 # Set the signal handler for Ctrl+C
 signal.signal(signal.SIGINT, signal_handler)
 
-# try:
-#     # Your main program logic goes here
-#     while True:
-#         # Do some work or wait for user input
-#         menu()
+try:
+    # Your main program logic goes here
+    while True:
+        # Do some work or wait for user input
+        menu()
 
         
 
-# except KeyboardInterrupt:
-#     # This block will be executed if Ctrl+C is pressed
-#     print("\nCtrl+C detected! Exiting gracefully...")
-#     # Additional cleanup or exit code can be added here
-#     sys.exit(0)
+except KeyboardInterrupt:
+    # This block will be executed if Ctrl+C is pressed
+    print("\nCtrl+C detected! Exiting gracefully...")
+    # Additional cleanup or exit code can be added here
+    sys.exit(0)
 
 # SettingShow(jsonParser('penjualan.json')['laporan'])
 # Load JSON data from file
-with open('penjualan.json') as f:
-    data = json.load(f)
+# with open('penjualan.json') as f:
+#     data = json.load(f)
 
-# Normalize JSON data into a DataFrame
-df = pd.json_normalize(data['laporan'])
+# # Normalize JSON data into a DataFrame
+# df = pd.json_normalize(data['laporan'])
 
-# Combine all lists in 'item_belanja' into one list
-all_items = [item for sublist in df['item_belanja'] for item in sublist]
+# # Combine all lists in 'item_belanja' into one list
+# all_items = [item for sublist in df['item_belanja'] for item in sublist]
 
-# Use Counter to count the frequency of each item
-item_counts = Counter(all_items)
+# # Use Counter to count the frequency of each item
+# item_counts = Counter(all_items)
 
-# Convert Counter result to a DataFrame
-df_item_counts = pd.DataFrame.from_dict(item_counts, orient='index', columns=['Jumlah']).reset_index()
-df_item_counts = df_item_counts.rename(columns={'index': 'Item'})
+# # Convert Counter result to a DataFrame
+# df_item_counts = pd.DataFrame.from_dict(item_counts, orient='index', columns=['Jumlah']).reset_index()
+# df_item_counts = df_item_counts.rename(columns={'index': 'Item'})
 
-# Display the most sold item
-item_terbanyak = df_item_counts.sort_values(by='Jumlah', ascending=False).head(1)
-print("Item yang paling banyak dijual:")
-print(item_terbanyak)
+# # Display the most sold item
+# item_terbanyak = df_item_counts.sort_values(by='Jumlah', ascending=False).head(1)
+# print("Item yang paling banyak dijual:")
+# print(item_terbanyak)
